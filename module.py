@@ -9,9 +9,11 @@ def make_key():
         print('키 생성 완료')
 
 def get_key():
+    #키 불러오기
     with open('key', 'rb') as f:
         key = f.read()
-        return key
+        key_str = key.decode('utf-8')
+        return key_str
 
 def encoding(input_text):
     # 암호화
